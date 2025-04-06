@@ -16,6 +16,21 @@ function mostrarSeries(): void {
 
     tableBody.appendChild(fila);
   });
+
+  const promedio = calcularPromedioTemporadas();
+  const filaPromedio = document.createElement("tr");
+
+  filaPromedio.innerHTML = `
+    <td colspan="3">Seasons average</td>
+    <td>${promedio.toFixed(2)}</td>
+  `;
+
+  tableBody.appendChild(filaPromedio);
+}
+
+function calcularPromedioTemporadas(): number {
+  let totalSeasons = series.reduce((sum, serie) => sum + serie.temporadas, 0);
+  return totalSeasons / series.length;
 }
 
 mostrarSeries();
