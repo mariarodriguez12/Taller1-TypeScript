@@ -30,20 +30,28 @@
 <body>
     <h1> TV Series</h1>
     <br>
-  <div class="container">
-    <table class="table table-striped" id="tabla-series">
-      <thead class="thead-dark">
-        <tr>
-          <th>#</th>
-          <th>Name</th>
-          <th>Channel</th>
-          <th>Seasons</th>
-        </tr>
-      </thead>
-      <tbody>
-      </tbody>
-    </table>
-  </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+          <table class="table table-striped" id="tabla-series">
+            <thead class="thead-dark">
+              <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Channel</th>
+                <th>Seasons</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+
+        <div class="col-md-4">
+          <div id="detailContainer"></div>
+        </div>
+      </div>
+    </div>
+    
 
   <script type="module" src="./scripts/serie.js"></script>
   <script type="module" src="./scripts/data.js"></script>
